@@ -31,6 +31,7 @@ const Card = ({ product, showViewProductButton = true }) => {
             <span className="badge badge-primary badge-pill">Out of Stock</span>
         );
     };
+    console.log(product);
 
     return (
         <div className="card">
@@ -40,6 +41,7 @@ const Card = ({ product, showViewProductButton = true }) => {
                 <p className="lead mt-2">
                     {product.description.substring(0, 100)}
                 </p>
+                <p className="black-10-original-price">${product.originalPrice}</p>
                 <p className="black-10">${product.price}</p>
                 <p className="black-9">
                     Category: {product.category && product.category.name}

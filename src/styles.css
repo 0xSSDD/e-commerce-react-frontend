@@ -22,6 +22,10 @@
  .black-10 {
      background: #f2f2f2;
  }
+ .black-10-original-price {
+    background: #f2f2f2;
+    text-decoration: line-through solid red;
+} 
  .black-9 {
      background: #e6e6e6;
  }
@@ -37,6 +41,7 @@
  .black-5 {
      background: #b3b3b3;
  }
+
  
  /**
   * product image on card

@@ -8,6 +8,7 @@ const AddProduct = () => {
     const [values, setValues] = useState({
         name: "",
         description: "",
+        originalPrice: "",
         price: "",
         categories: [],
         category: "",
@@ -25,6 +26,7 @@ const AddProduct = () => {
     const {
         name,
         description,
+        originalPrice,
         price,
         categories,
         category,
@@ -76,6 +78,7 @@ const AddProduct = () => {
                     name: "",
                     description: "",
                     photo: "",
+                    originalPrice: "",
                     price: "",
                     quantity: "",
                     loading: false,
@@ -119,7 +122,17 @@ const AddProduct = () => {
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Price</label>
+                <label className="text-muted">Original Price</label>
+                <input
+                    onChange={handleChange("originalPrice")}
+                    type="number"
+                    className="form-control"
+                    value={originalPrice}
+                />
+            </div>
+
+            <div className="form-group">
+                <label className="text-muted">Discounted Price</label>
                 <input
                     onChange={handleChange("price")}
                     type="number"
