@@ -175,6 +175,14 @@ const Checkout = ({ products }) => {
 
     const showLoading = loading =>
         loading && <h2 className="text-danger">Loading...</h2>;
+    
+    const showOrdersButton = () => (
+        <div>
+            <Link className="nav-link" to="/admin/orders">
+                            View Orders
+                        </Link>
+        </div>
+    );    
 
     return (
         <div>
@@ -183,6 +191,7 @@ const Checkout = ({ products }) => {
             {showSuccess(data.success)}
             {showError(data.error)}
             {showCheckout()}
+            {showOrdersButton()}    
         </div>
     );
 };
